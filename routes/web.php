@@ -15,6 +15,7 @@ use App\Http\Controllers\InformasiLoginController;
 use App\Http\Controllers\LandingPageBlogController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LowonganKerjaController;
+use App\Http\Controllers\Master\CountAboutController;
 use App\Http\Controllers\Master\MilestoneController;
 use App\Http\Controllers\Master\StudyCaseController;
 use App\Http\Controllers\ParnertController;
@@ -57,7 +58,7 @@ Route::get("/coba-template", function () {
     return view("admin.layouts.template");
 });
 
-Route::get("/", [LandingPageController::class, "dashboard"]);
+    Route::get("/", [LandingPageController::class, "dashboard"]);
 Route::get("/solusi/{slug}", [LandingPageController::class, "solusi"]);
 Route::get("/about_us", [LandingPageController::class, "about_us"]);
 Route::get("/contact_us", [LandingPageController::class, "contact_us"]);
@@ -132,6 +133,10 @@ Route::prefix("admin")->group(function () {
             Route::get("/partner/edit", [PartnerController::class, "edit"]);
             Route::put("/partner/simpan", [PartnerController::class, "update"]);
             Route::resource("partner", PartnerController::class);
+
+            Route::get("/countAbout/edit", [CountAboutController::class, "edit"]);
+            Route::put("/countAbout/simpan", [CountAboutController::class, "update"]);
+            Route::resource("countAbout", CountAboutController::class);
 
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);

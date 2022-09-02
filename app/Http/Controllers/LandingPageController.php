@@ -36,7 +36,7 @@ class LandingPageController extends Controller
         $data = [
             "milestone" => Milestone::where("milestone_status", 1)->paginate(6),
             "profil_perusahaan" => ProfilPerusahaan::first(),
-            "visi_misi" => VisiMisi::first(),
+            "visi_m isi" => VisiMisi::first(),
             "data_partnert" => Partner::orderBy("created_at", "DESC")->paginate(6)
         ];
 

@@ -16,7 +16,7 @@ use Carbon\Carbon;
         <div class="container" data-aos="fade-up">
             <div class="section-title mt-0">
                 <h2>Study Case</h2>
-                <p>IDM can increase efficiency from the start, enabling customers to enjoy the full benefits of integrated
+                <p>IDM can  increase efficiency from the start, enabling customers to enjoy the full benefits of integrated
                     and enterprise solutions in a more affordable way.</p>
             </div>
             <div class="row g-5">
