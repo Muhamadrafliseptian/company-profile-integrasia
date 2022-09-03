@@ -18,6 +18,7 @@ use App\Http\Controllers\LowonganKerjaController;
 use App\Http\Controllers\Master\CountAboutController;
 use App\Http\Controllers\Master\MilestoneController;
 use App\Http\Controllers\Master\StudyCaseController;
+use App\Http\Controllers\Master\WhoUsAboutController;
 use App\Http\Controllers\ParnertController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\Pengaturan\BenefitController;
@@ -29,6 +30,7 @@ use App\Http\Controllers\Pengaturan\VisiMisiController;
 use App\Http\Controllers\Solusi\GaleriSolusiController;
 use App\Http\Controllers\Solusi\KategoriSolusiController;
 use App\Http\Controllers\Solusi\SolusiController;
+use App\Models\Master\WhoUsAbout;
 
 /*
 |--------------------------------------------------------------------------
@@ -137,6 +139,10 @@ Route::prefix("admin")->group(function () {
             Route::get("/count_about/edit", [CountAboutController::class, "edit"]);
             Route::put("/count_about/simpan", [CountAboutController::class, "update"]);
             Route::resource("count_about", CountAboutController::class);
+
+            Route::get("/whoUs_about/edit", [WhoUsAboutController::class, "edit"]);
+            Route::put("/whoUs_about/simpan", [WhoUsAboutController::class, "update"]);
+            Route::resource("whoUs_about", WhoUsAboutController::class);
 
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);

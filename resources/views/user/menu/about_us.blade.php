@@ -36,10 +36,13 @@ use Carbon\Carbon;
     </section>
     <section id="counts" class="counts mb-0">
         <div class="container">
+             @php
+                use App\Models\Master\WhoUsAbout;
+                $data_whoUs = WhoUsAbout::get();
+            @endphp
             <div class="section-title mt-5">
-                <h2>Who we are?</h2>
-                <p>IDM can increase efficiency from the start, enabling customers to enjoy the full benefits of integrated
-                    and enterprise solutions in a more affordable way.</p>
+                <h2>{{ $data_whoUs->judul }}</h2>
+                <p>{{ $data_whoUs->deskripsi }}</p>
             </div>
             <div class="row">
                 <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start"
