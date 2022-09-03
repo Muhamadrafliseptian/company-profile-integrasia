@@ -103,8 +103,8 @@ use App\Models\Pengaturan\Menu;
                     <i class="fa fa-upload"></i> Lowongan Kerja
                 </a>
             </li>
-            <li class="{{ Request::is('admin/master/count_about') ? 'active' : '' }}">
-                <a href="{{ url('/admin/master/count_about') }}">
+            <li class="{{ Request::is('admin/master/countAbout') ? 'active' : '' }}">
+                <a href="{{ url('/admin/master/countAbout') }}">
                     <i class="fa fa-upload"></i> About Us
                 </a>
             </li>

@@ -36,7 +36,7 @@
                         <i class="fa fa-plus"></i> Tambah Data
                     </h3>
                 </div>
-                <form action="{{ url('/admin/master/countAbout') }}" method="POST" id="tambahAbout">
+                <form action="{{ url('/admin/master/count_about') }}" method="POST" id="tambahAbout">
                     {{ csrf_field() }}
                     <div class="box-body">
                         <div class="form-group">
@@ -91,16 +91,16 @@
                             @foreach ($data_about as $data)
                                 <tr>
                                     <td class="text-center">{{ ++$no }}.</td>
-                                    <td>{{ $data->about_icon }}</td>
-                                    <td>{{ $data->about_judul }}</td>
-                                    <td>{{ $data->about_deskripsi }}</td>
+                                    <td>{{ $data->icon }}</td>
+                                    <td>{{ $data->judul }}</td>
+                                    <td>{{ $data->deskripsi }}</td>
                                     <td class="text-center">
                                         <button onclick="editCountAbout({{ $data->id }})" type="button"
                                             class="btn btn-warning btn-sm btn-social" data-toggle="modal"
                                             data-target="#modal-default">
                                             <i class="fa fa-edit"></i> Edit
                                         </button>
-                                        <form action="{{ url('/admin/master/count_about/' . encrypt($data->id)) }}"
+                                        <form action="{{ url('/admin/master/count_about' . encrypt($data->id)) }}"
                                             method="POST" style="display: inline;">
                                             @method('DELETE')
                                             @csrf
@@ -129,7 +129,7 @@
                         <i class="fa fa-edit"></i> Edit Data
                     </h4>
                 </div>
-                <form action="{{ url('/admin/master/countAbout/simpan') }}" method="POST" id="editCountAbout">
+                <form action="{{ url('/admin/master/count_about/simpan') }}" method="POST" id="editCountAbout">
                     @method('PUT')
                     {{ csrf_field() }}
                     <div class="modal-body" id="modal-content-edit">
@@ -156,9 +156,9 @@
     <script src="{{ url('/template') }}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="{{ url('/template') }}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script>
-        function editKategori(id) {
+        function editCountAbout(id) {
             $.ajax({
-                url: "{{ url('/admin/master/countAbout/edit') }}",
+                url: "{{ url('/admin/master/count_about/edit') }}",
                 type: "GET",
                 data: {
                     id: id

@@ -134,9 +134,9 @@ Route::prefix("admin")->group(function () {
             Route::put("/partner/simpan", [PartnerController::class, "update"]);
             Route::resource("partner", PartnerController::class);
 
-            Route::get("/countAbout/edit", [CountAboutController::class, "edit"]);
-            Route::put("/countAbout/simpan", [CountAboutController::class, "update"]);
-            Route::resource("countAbout", CountAboutController::class);
+            Route::get("/count_about/edit", [CountAboutController::class, "edit"]);
+            Route::put("/count_about/simpan", [CountAboutController::class, "update"]);
+            Route::resource("count_about", CountAboutController::class);
 
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);
