@@ -36,37 +36,31 @@
                         <i class="fa fa-plus"></i> Tambah Data
                     </h3>
                 </div>
-                <form action="{{ url('/admin/master/count_about') }}" method="POST" id="tambahAbout">
-                    {{ csrf_field() }}
+                @if (empty($data_about))
+                    <form method="POST" action="{{ url('/admin/master/count_about') }}" enctype="multipart/form-data" id="tambahCountAbout">
+                @else
+                    <form method="POST" action="{{ url('/admin/master/count_about/' . encrypt($data_about->id)) }}" enctype="multipart/form-data" id="editCountAbout">
+                @method('PUT')
+                @endif
+                {{ csrf_field() }}
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="about_icon"> Icon </label>
-                            <input type="text" class="form-control" name="about_icon" id="about_icon"
-                                placeholder="Masukkan Nama" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="about_judul"> Judul </label>
-                            <input type="text" class="form-control" name="about_judul" id="about_judul"
-                                placeholder="Masukkan Nama" value="">
-                        </div>
-                        <div class="form-group">
                             <label for="about_deskripsi"> Deskripsi </label>
-                            <input type="text" class="form-control" name="about_deskripsi" id="about_deskripsi"
-                                placeholder="Masukkan Nama" value="">
-                        </div>
+                            <textarea id="about_deskripsi" name="about_deskripsi" rows="10" cols="80">
+                                {{ empty($data_about->deskripsi) ? 'Masukkan Deskripsi Perusahaan' : $data_about->deskripsi }}
+                        </textarea>
                     </div>
                     <div class="box-footer">
-                        <button type="reset" class="btn btn-danger btn-sm btn-social">
-                            <i class="fa fa-times"></i> Batal
-                        </button>
-                        <button type="submit" class="btn btn-primary btn-sm btn-social">
-                            <i class="fa fa-plus"></i> Tambah
-                        </button>
+                        <button type="submit"
+                         class="btn btn-social {{ empty($data_about) ? 'btn-primary' : 'btn-success' }} btn-sm">
+                         <i class="fa {{ empty($data_about) ? 'fa-plus' : 'fa-save' }}"></i>
+                        {{ empty($data_about) ? 'Tambah' : 'Simpan' }}
+                    </button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="col-md-8">
+        {{-- <div class="col-md-8">
             <div class="box box-primary">
                 <div class="box-header">
                     <h3 class="box-title">
@@ -115,44 +109,18 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
-
-    <!-- Edit Data -->
-    <div class="modal fade" id="modal-default">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">
-                        <i class="fa fa-edit"></i> Edit Data
-                    </h4>
-                </div>
-                <form action="{{ url('/admin/master/count_about/simpan') }}" method="POST" id="editCountAbout">
-                    @method('PUT')
-                    {{ csrf_field() }}
-                    <div class="modal-body" id="modal-content-edit">
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="reset" class="btn btn-danger btn-sm btn-social pull-left">
-                            <i class="fa fa-times"></i> Batal
-                        </button>
-                        <button type="submit" class="btn btn-success btn-sm btn-social">
-                            <i class="fa fa-save"></i> Simpan
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- END -->
 
 @endsection
 
 @section('js')
-
+    <script src="{{ url('/template') }}/bower_components/ckeditor/ckeditor.js"></script>
+    <script>
+        $(function() {
+            CKEDITOR.replace('about_deskripsi')
+        })
+    </script>
     <script src="{{ url('/template') }}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="{{ url('/template') }}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script>
@@ -178,15 +146,15 @@
             var e = {};
             e.UTIL = {
                 setupFormValidation: function() {
-                    a("#tambahKategori").validate({
+                    a("#editCountAbout").validate({
                             ignore: "",
                             rules: {
-                                nama_kategori: {
+                                about_deskripsi: {
                                     required: !0
                                 }
                             },
                             messages: {
-                                nama_kategori: {
+                                about_deskripsi: {
                                     required: "Nama Kategori harap di isi!"
                                 }
                             },
@@ -194,15 +162,15 @@
                                 a.submit()
                             }
                         }),
-                        a("#editKategori").validate({
+                        a("#tambahCountAbout").validate({
                             ignore: "",
                             rules: {
-                                nama_kategori: {
+                                about_deskripsi: {
                                     required: !0
                                 }
                             },
                             messages: {
-                                nama_kategori: {
+                                about_deskripsi: {
                                     required: "Nama Kategori harap di isi!"
                                 }
                             },

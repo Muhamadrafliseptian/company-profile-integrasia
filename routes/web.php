@@ -16,6 +16,7 @@ use App\Http\Controllers\LandingPageBlogController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LowonganKerjaController;
 use App\Http\Controllers\Master\CountAboutController;
+use App\Http\Controllers\Master\EcoSpiritController;
 use App\Http\Controllers\Master\MilestoneController;
 use App\Http\Controllers\Master\StudyCaseController;
 use App\Http\Controllers\Master\WhoUsAboutController;
@@ -143,6 +144,10 @@ Route::prefix("admin")->group(function () {
             Route::get("/whoUs_about/edit", [WhoUsAboutController::class, "edit"]);
             Route::put("/whoUs_about/simpan", [WhoUsAboutController::class, "update"]);
             Route::resource("whoUs_about", WhoUsAboutController::class);
+
+            Route::get("/eco_spirit/edit", [EcoSpiritController::class, "edit"]);
+            Route::put("/eco_spirit/simpan", [EcoSpiritController::class, "update"]);
+            Route::resource("eco_spirit", EcoSpiritController::class);
 
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);

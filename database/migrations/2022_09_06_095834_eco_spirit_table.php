@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('about_us', function (Blueprint $table) {
+        Schema::create('eco_spirit', function (Blueprint $table) {
             $table->id();
-            $table->string("deskripsi");
+            $table->string('eco_spirit_icon');
+            $table->string('eco_spirit_judul');
+            $table->text('eco_spirit_deskripsi');
+            $table->string('eco_spirit_gambar');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('count_about');
+        //
     }
 };
