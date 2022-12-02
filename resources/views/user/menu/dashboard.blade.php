@@ -72,9 +72,10 @@
     </div>
     <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
-            <div class="section-title">
+            <div class="section-title mt-4">
                 <h2>Video</h2>
                 <h3><span>Integrasia Utama</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quam eligendi a facilis expedita molestias quia eum, repellat maxime, odit, itaque magnam unde. Quo doloribus cupiditate culpa sint repudiandae? Commodi.</p>
             </div>
             <div class="card" style="border: none;">
                 <video class="w-100 h-100" controls>
@@ -89,9 +90,7 @@
     </div>
     </section>
     <main id="main">
-        <section id="box" class="icon-box">
-            <div class="container">
-        <div class="container">
+        <div class="container mt-4">
         <section id="box" class="icon-box">
              <div class="row icon-boxes">
                 <div class="section-title" data-aos="fade-up" data-aos-delay="200">
@@ -143,26 +142,8 @@
       </div>
 </section>
 </div>
-        <div class="section-title">
-            <h2>Testimonials</h2>
-            <h3><span>Check our Testimonials</span></h3>
-        </div>
-        @forelse ($data_testimonial as $data)
-        @empty
-            <div class="container">
-                <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
-                    <div class="alert alert-danger text-center">
-                        <i>
-                            <b>
-                                " Data Tidak Ada "
-                            </b>
-                        </i>
-                    </div>
-                </div>
-            </div>
-            @endforelse
             <!-- ======= Testimonials Section ======= -->
-            <div class="section-title">
+            <div class="section-title mt-4">
                 <h2>Testimonials</h2>
                 <h3><span>Check our Testimonials</span></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam animi quos, suscipit accusamus ut nemo reiciendis, in reprehenderit saepe placeat tempore quibusdam odit commodi cupiditate? Eos nam eveniet fugiat commodi.</p>
