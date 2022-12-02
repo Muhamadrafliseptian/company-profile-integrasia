@@ -69,6 +69,7 @@
             </div>
         </div>
     </section>
+    </div>
     <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
@@ -84,11 +85,14 @@
             </div>
         </div>
         </div>
+    </section>
     </div>
     </section>
     <main id="main">
         <section id="box" class="icon-box">
             <div class="container">
+        <div class="container">
+        <section id="box" class="icon-box">
              <div class="row icon-boxes">
                 <div class="section-title" data-aos="fade-up" data-aos-delay="200">
                     <h2>Benefit in Us?</h2>
@@ -123,6 +127,27 @@
       </div>
 </section>
 @forelse ($data_testimonial as $data)
+        </div>
+         @empty
+                <div class="col-md-12">
+                    <div class="alert alert-danger text-center">
+                        <i>
+                            <b>
+                                " Data Tidak Ada "
+                            </b>
+                        </i>
+                    </div>
+                </div>
+            @endforelse
+        </div>
+      </div>
+</section>
+</div>
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <h3><span>Check our Testimonials</span></h3>
+        </div>
+        @forelse ($data_testimonial as $data)
         @empty
             <div class="container">
                 <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
@@ -166,12 +191,7 @@
                 </div>
 
             </div>
-        </section><!-- End Testimonials Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <!-- End Portfolio Section -->
-
-        <!-- ======= Team Section ======= -->
+        </section>
         <section id="team" class="team section">
             <div class="container" data-aos="fade-up">
 

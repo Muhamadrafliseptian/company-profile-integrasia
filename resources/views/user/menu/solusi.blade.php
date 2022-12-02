@@ -66,6 +66,9 @@
 
 </section>
     <main id="main">
+
+        @include('user.menu.benefit')
+
         <section id="faq" class="faq mb-0">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
@@ -85,7 +88,7 @@
                                     <p>
                                         Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet
                                         non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor
-                                        purus non.aa
+                                        purus non.
                                     </p>
                                 </div>
                             </li>

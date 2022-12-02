@@ -15,8 +15,11 @@ use App\Http\Controllers\InformasiLoginController;
 use App\Http\Controllers\LandingPageBlogController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LowonganKerjaController;
+use App\Http\Controllers\Master\CountAboutController;
+use App\Http\Controllers\Master\EcoSpiritController;
 use App\Http\Controllers\Master\MilestoneController;
 use App\Http\Controllers\Master\StudyCaseController;
+use App\Http\Controllers\Master\WhoUsAboutController;
 use App\Http\Controllers\ParnertController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\Pengaturan\BenefitController;
@@ -28,6 +31,7 @@ use App\Http\Controllers\Pengaturan\VisiMisiController;
 use App\Http\Controllers\Solusi\GaleriSolusiController;
 use App\Http\Controllers\Solusi\KategoriSolusiController;
 use App\Http\Controllers\Solusi\SolusiController;
+use App\Models\Master\WhoUsAbout;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +61,7 @@ Route::get("/coba-template", function () {
     return view("admin.layouts.template");
 });
 
-Route::get("/", [LandingPageController::class, "dashboard"]);
+    Route::get("/", [LandingPageController::class, "dashboard"]);
 Route::get("/solusi/{slug}", [LandingPageController::class, "solusi"]);
 Route::get("/about_us", [LandingPageController::class, "about_us"]);
 Route::get("/contact_us", [LandingPageController::class, "contact_us"]);
@@ -132,6 +136,18 @@ Route::prefix("admin")->group(function () {
             Route::get("/partner/edit", [PartnerController::class, "edit"]);
             Route::put("/partner/simpan", [PartnerController::class, "update"]);
             Route::resource("partner", PartnerController::class);
+
+            Route::get("/count_about/edit", [CountAboutController::class, "edit"]);
+            Route::put("/count_about/simpan", [CountAboutController::class, "update"]);
+            Route::resource("count_about", CountAboutController::class);
+
+            Route::get("/whoUs_about/edit", [WhoUsAboutController::class, "edit"]);
+            Route::put("/whoUs_about/simpan", [WhoUsAboutController::class, "update"]);
+            Route::resource("whoUs_about", WhoUsAboutController::class);
+
+            Route::get("/eco_spirit/edit", [EcoSpiritController::class, "edit"]);
+            Route::put("/eco_spirit/simpan", [EcoSpiritController::class, "update"]);
+            Route::resource("eco_spirit", EcoSpiritController::class);
 
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);
