@@ -17,67 +17,64 @@
             </div>
         </div>
     </div>
+    <section>
 
-    <div class="container-fluid-lg" data-aos="zoom-out" data-aos-delay="100">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                @php
-                    $i = 1;
-                @endphp
-                @forelse ($data_carousel as $data)
-                    <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
-                        @php
-                            $i++;
-                        @endphp
-                        <img src="{{ url('/storage/' . $data->carousel_gambar) }}" class="d-block" style="width: 100%;">
-                        <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0;">
-                            <h5>{{ $data->carousel_judul }}</h5>
-                            <p>{{ $data->carousel_deskripsi }}</p>
+        <div class="container-fluid-lg" data-aos="zoom-out" data-aos-delay="100">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    @php
+                        $i = 1;
+                    @endphp
+                    @forelse ($data_carousel as $data)
+                        <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
+                            @php
+                                $i++;
+                            @endphp
+                            <img src="{{ url('/storage/' . $data->carousel_gambar) }}" class="d-block" style="width: 100%;">
+                            <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0;">
+                                <h5>{{ $data->carousel_judul }}</h5>
+                                <p>{{ $data->carousel_deskripsi }}</p>
+                            </div>
                         </div>
-                    </div>
-                @empty
-                    <div class="carousel-item active">
-                        <img src="{{ url('/gambar/404-coba.jpg') }}" class="d-block" style="width: 100%; height: 600px;">
-                        <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0;">
-                            <h5>Data Tidak Ada</h5>
-                            <p>
-                                Tidak Ditemukan
-                            </p>
+                    @empty
+                        <div class="carousel-item active">
+                            <img src="{{ url('/gambar/404-coba.jpg') }}" class="d-block" style="width: 100%; height: 600px;">
+                            <div class="carousel-caption d-flex flex-column justify-content-center h-100" style="top: 0;">
+                                <h5>Data Tidak Ada</h5>
+                                <p>
+                                    Tidak Ditemukan
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                @endforelse
+                    @endforelse
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-
-    </div>
-
-
+    </section>
     <section id="featured-services" class="featured-services">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>Video</h2>
                 <h3><span>Integrasia Utama</span></h3>
             </div>
-
-
             <div class="card" style="border: none;">
                 <video class="w-100 h-100" controls>
                     <source src="{{ url('assets/video/test.mp4') }}" type="video/mp4">
@@ -86,21 +83,46 @@
                 </video>
             </div>
         </div>
-
-
         </div>
-    </section>
-
     </div>
+    </section>
     <main id="main">
-        @include('user.menu.benefit')
-
-        <div class="section-title">
-            <h2>Testimonials</h2>
-            <h3><span>Check our Testimonials</span></h3>
+        <section id="box" class="icon-box">
+            <div class="container">
+             <div class="row icon-boxes">
+                <div class="section-title" data-aos="fade-up" data-aos-delay="200">
+                    <h2>Benefit in Us?</h2>
+                    <h3><span>We Achieved People’s Trust By Our Great Service</span></h3>
+                    <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
+                        vitae autem.</p>
+                </div>
+            @php
+                use App\Models\Pengaturan\Benefit;
+                $data_benefit = Benefit::get();
+            @endphp
+            @forelse ($data_benefit as $benefit)
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon"><i class="{{ $benefit->benefit_icon }}"></i></div>
+          <div class="icon-box">
+            <h4 class="title"><a href="">{{ $benefit->benefit_judul }}</a></h4>
+            <p class="description">{{ $benefit->benefit_deskripsi }}</p>
+          </div>
         </div>
-
-        @forelse ($data_testimonial as $data)
+         @empty
+                <div class="col-md-12">
+                    <div class="alert alert-danger text-center">
+                        <i>
+                            <b>
+                                " Data Tidak Ada "
+                            </b>
+                        </i>
+                    </div>
+                </div>
+            @endforelse
+        </div>
+      </div>
+</section>
+@forelse ($data_testimonial as $data)
         @empty
             <div class="container">
                 <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
@@ -113,11 +135,15 @@
                     </div>
                 </div>
             </div>
-        @endforelse
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials">
+            @endforelse
+            <!-- ======= Testimonials Section ======= -->
+            <div class="section-title">
+                <h2>Testimonials</h2>
+                <h3><span>Check our Testimonials</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam animi quos, suscipit accusamus ut nemo reiciendis, in reprehenderit saepe placeat tempore quibusdam odit commodi cupiditate? Eos nam eveniet fugiat commodi.</p>
+            </div>
+            <section id="testimonials" class="testimonials">
             <div class="container" data-aos="zoom-in">
-
                 <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
                     <div class="swiper-wrapper">
                         @foreach ($data_testimonial as $data)
@@ -188,7 +214,7 @@
                             </div>
                         </div>
                     @endforelse
-                    <a href="{{ url('/blog/berita') }}" class="text-center">
+                    <a href="{{ url('/blog/berita') }}" class="text-center btn btn-sm btn-primary w-">
                         Lihat Lebih Banyak
                     </a>
                 </div>

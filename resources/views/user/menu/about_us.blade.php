@@ -6,38 +6,27 @@ use Carbon\Carbon;
 @section('title', 'About Us')
 
 @section('content')
-    <section id="why-us" class="why-us section-bg">
-        <div class="container-fluid" data-aos="fade-up">
-            <div class="row">
-                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-                    <div class="content">
-                        @if (empty($profil_perusahaan->deskripsi))
-                            <div class="alert alert-danger">
-                                Data Tidak Ada
-                            </div>
-                        @else
-                            {!! $profil_perusahaan->deskripsi !!}
-                        @endif
-                    </div>
-                    <div class="accordion-list">
-                    </div>
-                </div>
-                <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" data-aos="zoom-in" data-aos-delay="150">
-                    @if (empty($profil_perusahaan->logo))
-                        <div class="alert alert-danger">
-                            Data Tidak Ada
-                        </div>
-                    @else
-                        <img src="{{ url('/storage/' . $profil_perusahaan->logo) }}" class="img-fluid">
-                    @endif
-                </div>
-            </div>
+    <section id="" class=" section-bg">
+       <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{{ url('assets/img/1.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a href="#counts" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
         </div>
+      </div>
+    </div>
+  </div>
     </section>
     <section id="counts" class="counts mb-0">
         <div class="container">
             <div class="section-title mt-5">
                 <h2>Who we are?</h2>
+                <h3><span>We are problem solver</span></h3>
                 <p>IDM can increase efficiency from the start, enabling customers to enjoy the full benefits of integrated
                     and enterprise solutions in a more affordable way.</p>
             </div>
@@ -104,6 +93,7 @@ use Carbon\Carbon;
         <div class="container" data-aos="fade-up">
             <div class="section-title mt-0">
                 <h2>One Spirit Eco System</h2>
+                <h3><span>Spirit System</span></h3>
                 <p>Integrationa Utama calls it the Integration Data Model (IDM). IDM is part of a platform that integrates
                     all software produced. IDM can increase efficiency from the start, enabling customers to enjoy the full
                     benefits of integrated and enterprise solutions in a more affordable way.</p>
@@ -138,9 +128,9 @@ use Carbon\Carbon;
         </div>
     </section>
     <!-- ======= About Section ======= -->
-    <section id="aboutus" class="about section-bg">
+    <section id="aboutus" class="about section-bg mt-4">
         <div class="container" data-aos="fade-up">
-            <div class="section-title">
+            <div class="section-title mt-4">
                 <h2>About</h2>
                 <h3><span>Find Out More About Integrasia</span></h3>
                 <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
@@ -161,10 +151,11 @@ use Carbon\Carbon;
             </div>
         </div>
     </section>
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio mt-4">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
                 <h2>MILESTONE</h2>
+                <h3><span>Check our milestone</span></h3>
                 <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
                     vitae autem.</p>
             </div>
@@ -188,13 +179,13 @@ use Carbon\Carbon;
             </div>
         </div>
     </section>
-    <div class="section-title">
+    <div class="section-title mt-2">
         <h2>Partners</h2>
-        <h3><span>Check our Partners</span></h3>
+        <h3><span>Check our partners</span></h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem laboriosam, repudiandae rerum velit quaerat maxime id. Temporibus dolorum pariatur placeat nesciunt laboriosam quaerat enim nam blanditiis veritatis, architecto incidunt ea?</p>
     </div>
     <section id="clients" class="clients section-bg">
         <div class="container" data-aos="zoom-in">
-
             <div class="row">
                 @forelse($data_partnert as $data)
                     <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">

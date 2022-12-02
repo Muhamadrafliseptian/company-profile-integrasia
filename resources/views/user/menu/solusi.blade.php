@@ -12,56 +12,60 @@
         </div>
     </section>
     <br>
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Video</h2>
+<div class="container" data-aos="fade-up">
+    <div class="section-title">
+        <h2>Video</h2>
             <h3><span>Integrasia Utama</span></h3>
-        </div>
+    </div>
         <div class=" position-relative">
             <div class="wrapper text-center">
                 <img id="img-index" src="assets/img/ui2.webp" alt="">
-                <div class="position-absolute top-50 start-50 translate-middle">
-                    <img class="bi-video bi-play-circle-fill video-btn" src="{{ asset('assets/img/play.png') }}"
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <img class="bi-video bi-play-circle-fill video-btn" src="{{ asset('assets/img/play.png') }}"
                         data-bs-toggle="modal" data-src="{{ url('https://www.youtube.com/embed/eU9rZpbfWwk') }}"
                         data-bs-target="#myModal" alt="">
-                    {{-- <i class="bi bi-play-circle-fill video-btn" style="font-size: 100px; color: blue;"  data-bs-toggle="modal" data-src="{{ url('https://www.youtube.com/embed/eU9rZpbfWwk') }}" data-bs-target="#myModal" ></i> --}}
-                    {{-- </button> --}}
-                    {{-- <img src="assets/img/testimonials/testimonials-1.jpg" class="img-fluid " alt="">
-                                <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a> --}}
+                    </div>
+                        <a href="#" class="lightbox play-btn mb-4"></a>
+                    </div>
                 </div>
-                <a href="#" class="lightbox play-btn mb-4"></a>
+            </div>
+        </section>
+    </div>
+</div>
+<section>
+        <div class="container col-xxl-10 px-4 py-5" data-aos="fade-up">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{{ url('assets/img/1.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+                    </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="#counts" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
+                </div>
             </div>
         </div>
     </div>
-    </section>
-    </div>
-    </div>
-    <div class="container" data-aos="fade-up">
-        <section id="portfolio" class="portfolio">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>User Interface</h2>
-                    <h3><span>Geospatial Platforming Interface</span></h3>
+</section>
+<section id="" class="">
+        <div class="container col-xxl-10" data-aos="fade-up">
+            <div class="row flex-lg-row-reverse align-items-center g-5 ">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <a href="#counts" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
+                    </div>
                 </div>
+            <div class="col-lg-6">
+                <img src="{{ url('assets/img/1.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-6 ">
-                    {{-- <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0110981970392!2d106.78601371468598!3d-6.262267595467255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1a206b09c8b%3A0xc34e1845b9a02a81!2sIntegrasia%20Utama!5e0!3m2!1sid!2sid!4v1656501375004!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe> --}}
-                    <img class="mb-4 mb-lg-0" style="border:0; width: 100%; height: 384px;"
-                        src="{{ url('assets/img/1.jpg') }}" alt="">
-                </div>
-                <div class="col-lg-6">
-                    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore necessitatibus natus incidunt
-                        nihil suscipit adipisci asperiores, minus quidem labore est ipsum reiciendis cupiditate doloremque
-                        laudantium delectus, repudiandae dolore architecto soluta?</P>
-                </div>
-            </div>
+        </div>
     </div>
-    </section>
+
+</section>
     <main id="main">
-
-        @include('user.menu.benefit')
-
         <section id="faq" class="faq mb-0">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">

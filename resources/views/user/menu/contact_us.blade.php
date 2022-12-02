@@ -3,10 +3,11 @@ use App\Models\ProfilPerusahaan;
 $data_profil = ProfilPerusahaan::first();
 @endphp
 
-<section id="contact" class="contact">
+<section id="contact" class="contact mt-4">
     <div class="container" data-aos="fade-up">
         <div class="section-title">
             <h2>Contact</h2>
+            <h3><span>lorem</span></h3>
             <p>
                 Silahkan Isi Form di Bawah Ini Jika Ada Pertanyaan.
             </p>
