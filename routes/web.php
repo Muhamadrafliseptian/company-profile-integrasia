@@ -79,6 +79,9 @@ Route::get("/single_partner", function () {
 
 Route::post("/kirim_komentar", [LandingPageController::class, "kirim_komentar"]);
 
+Route::get("/new-template", function() {
+    return view("layouts.main");
+});
 Route::prefix("admin")->group(function () {
     Route::group(["middleware" => "guest"], function () {
         // Data Login
