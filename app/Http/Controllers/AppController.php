@@ -38,7 +38,7 @@ class AppController extends Controller
             "data_profil_perusahaan" => ProfilPerusahaan::count()
         ];
 
-        return view("admin.dashboard", $data);
+        return view("super_admin.dashboard", $data);
     }
 
     public function hubungi_kami()

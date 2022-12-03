@@ -82,6 +82,9 @@ Route::post("/kirim_komentar", [LandingPageController::class, "kirim_komentar"])
 Route::get("/new-template", function() {
     return view("layouts.main");
 });
+
+require __DIR__ . '/super_admin.php';
+
 Route::prefix("admin")->group(function () {
     Route::group(["middleware" => "guest"], function () {
         // Data Login
@@ -101,7 +104,6 @@ Route::prefix("admin")->group(function () {
         });
 
         Route::get("/", [AppController::class, "dashboard"]);
-        Route::get("/dashboard", [AppController::class, "dashboard"]);
 
         Route::prefix("blog")->group(function () {
             Route::resource("lowongan_kerja", LowonganKerjaController::class);
