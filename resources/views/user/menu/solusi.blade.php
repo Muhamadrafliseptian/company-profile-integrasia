@@ -222,12 +222,10 @@
                             style="height: 300px;">
                         <div class="portfolio-info">
                             <h4>{{ $data->id }}</h4>
-                            <div class="inline-flex">
-                                <a href="{{ url('study_case') }}" class="portfolio-lightbox preview-link"><i class="fas fa-user"></i></a>
-                                <a href="{{ url('/storage/' . $data->galeri_gambar) }}" data-gallery="portfolioGallery"
+                            <a href="{{ url('study_case') }}" class=""><i class="fas fa-arrow-right"></i></a>
+                            <a href="{{ url('/storage/' . $data->galeri_gambar) }}" data-gallery="portfolioGallery"
                                     class="portfolio-lightbox preview-link" title="{{ $data->id }}"><i
                                         class="bx bxs-show"></i></a>
-                            </div>
                             </div>
                         </div>
                     </div>

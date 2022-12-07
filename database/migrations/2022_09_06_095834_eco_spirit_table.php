@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('eco_spirit_icon');
             $table->string('eco_spirit_judul');
             $table->text('eco_spirit_deskripsi');
-            $table->string('eco_spirit_gambar');
             $table->timestamps();
         });
     }

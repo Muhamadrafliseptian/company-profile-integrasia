@@ -17,13 +17,17 @@ class EcoSpiritController extends Controller
         return view("admin.master.eco_spirit.index", $data);
     }
 
+    public function create()
+    {
+        return view("admin.master.eco_spirit.tambah");
+    }
+
     public function store(Request $request)
     {
         EcoSpirit::create([
             "eco_spirit_icon" => $request->eco_spirit_icon,
             "eco_spirit_judul" =>$request->eco_spirit_judul,
             "eco_spirit_deskripsi" => $request->eco_spirit_deskripsi,
-            "eco_spirit_gambar" => $request->eco_spirit_gambar
         ]);
 
         return back()->with(["message" => '<script>swal("Berhasil", "Data Berhasil di Tambahkan", "success");</script>']);
@@ -44,7 +48,6 @@ class EcoSpiritController extends Controller
             "eco_spirit_icon" => $request->eco_spirit_icon,
             "eco_spirit_judul" =>$request->eco_spirit_judul,
             "eco_spirit_deskripsi" => $request->eco_spirit_deskripsi,
-            "eco_spirit_gambar" => $request->eco_spirit_gambar
         ]);
 
         return back()->with(["message" => '<script>swal("Berhasil", "Data Berhasil di Simpan", "success");</script>']);

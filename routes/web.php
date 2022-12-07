@@ -145,8 +145,6 @@ Route::prefix("admin")->group(function () {
             Route::put("/whoUs_about/simpan", [WhoUsAboutController::class, "update"]);
             Route::resource("whoUs_about", WhoUsAboutController::class);
 
-            Route::get("/eco_spirit/edit", [EcoSpiritController::class, "edit"]);
-            Route::put("/eco_spirit/simpan", [EcoSpiritController::class, "update"]);
             Route::resource("eco_spirit", EcoSpiritController::class);
 
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
