@@ -82,21 +82,9 @@ $data_profil = ProfilPerusahaan::first();
                     </a>
                     <ul>
                         <li class="dropdown">
-                            <a href="{{ url('blog-event') }}"
-                                class="{{ Request::is('blog-event') ? ' active ' : ' ' }}">
-                                <span>Event</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
                             <a href="{{ url('blog/berita') }}"
                                 class="{{ Request::is('blog/berita') ? ' active ' : ' ' }}">
                                 <span>Newsblog</span>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="{{ url('blog-press') }}"
-                                class="{{ Request::is('blog-press') ? ' active ' : ' ' }}">
-                                <span>Press</span>
                             </a>
                         </li>
                         <li class="dropdown">

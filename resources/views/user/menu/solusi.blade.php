@@ -9,6 +9,9 @@
             <h5 class="text-center text-light">
                 {{ $detail->solusi_deskripsi }}
             </h5>
+            <div class="text-center">
+                <a href="https://wa.me/628117502838?text=Hello%20I'm%20interested%20in%20OSLOG" class="btn btn-sm btn-success">Chat With Our Team</a>
+            </div>
         </div>
     </section>
     <br>
@@ -36,35 +39,34 @@
         <div class="container col-xxl-10 px-4 py-5" data-aos="fade-up">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-6">
-            <img src="{{ url('assets/img/1.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img src="{{ url('/storage/' . $detail->solusi_gambar) }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                     </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a href="#counts" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
+                    <a href="#descone" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="" class="">
+<section id="descone" class="">
         <div class="container col-xxl-10" data-aos="fade-up">
             <div class="row flex-lg-row-reverse align-items-center g-5 ">
                 <div class="col-10 col-sm-8 col-lg-6">
                     <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
                     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <a href="#counts" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
-                    </div>
                 </div>
             <div class="col-lg-6">
                 <img src="{{ url('assets/img/1.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
         </div>
     </div>
-
 </section>
+<div class="text-center py-5">
+    <a href="https://wa.me/628117502838?text=Hello%20I'm%20interested%20in%20OSLOG" class="btn btn-sm btn-dark">Jump Onto Geospatial Platforming</a>
+</div>
     <main id="main">
         <section id="fitur" class="fitur mt-4">
             <div class="container" data-aos="fade-up">
@@ -220,9 +222,13 @@
                             style="height: 300px;">
                         <div class="portfolio-info">
                             <h4>{{ $data->id }}</h4>
-                            <a href="{{ url('/storage/' . $data->galeri_gambar) }}" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox preview-link" title="{{ $data->id }}"><i
-                                    class="bx bxs-show"></i></a>
+                            <div class="inline-flex">
+                                <a href="{{ url('study_case') }}" class="portfolio-lightbox preview-link"><i class="fas fa-user"></i></a>
+                                <a href="{{ url('/storage/' . $data->galeri_gambar) }}" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox preview-link" title="{{ $data->id }}"><i
+                                        class="bx bxs-show"></i></a>
+                            </div>
+                            </div>
                         </div>
                     </div>
                 @empty

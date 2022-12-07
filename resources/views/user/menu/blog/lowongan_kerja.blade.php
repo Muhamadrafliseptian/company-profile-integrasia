@@ -28,12 +28,12 @@
                             </p>
                             <p class="card-text">Rp. {{ $data->lowongan_gaji }}</p>
                             <p class="card-text text-secondary">
-                                {{ $data->lowongan_deskripsi }}
+                                {!! $data->lowongan_deskripsi !!}
                             </p>
                             <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
+                                <small class="text-muted">Tanggal dibuat: {!! $data->created_at !!}</small>
                             </p>
-                            <a href="" class="text-end">
+                            <a href="mailto:hello.integrasia@gmail.com" class="text-end">
                                 <p><i class="fa-solid fa-arrow-right"></i></p>
                             </a>
                         </div>

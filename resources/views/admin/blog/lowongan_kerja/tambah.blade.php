@@ -77,7 +77,7 @@
                                 placeholder="Masukkan Alamat Lowongan">
                         </div>
                         <div class="form-group">
-                            <label for="lowongan_deskripsi"> Deskripsi Alamat </label>
+                            <label for="lowongan_deskripsi"> Deskripsi Pekerjaan </label>
                             <textarea name="lowongan_deskripsi" class="form-control" id="lowongan_deskripsi" rows="5" value="{{ old('lowongan_deskripsi') }}">
                                 placeholder="Masukkan Deskripsi Lowongan"></textarea>
                         </div>
@@ -98,6 +98,12 @@
 @endsection
 
 @section('js')
+    <script src="{{ url('/template') }}/bower_components/ckeditor/ckeditor.js"></script>
+    <script>
+        $(function() {
+            CKEDITOR.replace('lowongan_deskripsi')
+        })
+    </script>
     <script type="text/javascript">
         function previewImage() {
             const image = document.querySelector("#solusi_gambar");

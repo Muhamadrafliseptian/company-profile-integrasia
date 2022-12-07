@@ -109,6 +109,12 @@
 @endsection
 
 @section('js')
+    <script src="{{ url('/template') }}/bower_components/ckeditor/ckeditor.js"></script>
+    <script>
+        $(function() {
+            CKEDITOR.replace('lowongan_deskripsi')
+        })
+    </script>
 
     <script type="text/javascript">
         function previewImage() {

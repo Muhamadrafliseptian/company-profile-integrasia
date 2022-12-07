@@ -62,7 +62,7 @@
                                     <td>{{ $data->lowongan_nama }}</td>
                                     <td class="text-center">Rp. {{ number_format($data->lowongan_gaji) }} </td>
                                     <td class="text-center">{{ $data->lowongan_alamat }}</td>
-                                    <td>{{ $data->lowongan_deskripsi }}</td>
+                                    <td>{!! $data->lowongan_deskripsi !!}</td>
                                     <td class="text-center">
                                         <a href="{{ url('/admin/blog/lowongan_kerja/' . encrypt($data->id) . '/edit') }}"
                                             class="btn btn-warning btn-sm btn-social" id="editLowonganKerja">
