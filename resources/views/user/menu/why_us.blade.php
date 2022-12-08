@@ -10,7 +10,7 @@
     </section>
     <section id="services" class="services section-bg">
         <div class="container" data-aos="fade-up">
-            <div class="section-title">
+            <div class="section-title mt-4">
                 <h2>WHY CHOOSE US?</h2>
                 <p>
                     Magnam dolores commodi suscipit. Necessitatibus eius consequatur
@@ -27,7 +27,7 @@
                                 <h5 class="card-title">{{ $data->why_us_name }}</h5>
                                 <p class="card-text">{{ $data->why_us_deskripsi }}
                                 </p>
-                                <a href="{{ url('/why_us/' . $data->why_us_slug) }}" class="btn-sm btn-primary text-end">Read
+                                <a href="{{ url('/why_us/' . $data->why_us_slug) }}" class="btn-sm btn-primary text-end">
                                     Selengkapnya
                                 </a>
                             </div>

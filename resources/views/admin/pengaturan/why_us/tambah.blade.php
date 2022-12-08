@@ -87,7 +87,12 @@
 @endsection
 
 @section('js')
-
+    <script src="{{ url('/template') }}/bower_components/ckeditor/ckeditor.js"></script>
+    <script>
+        $(function() {
+            CKEDITOR.replace('why_us_deskripsi')
+        })
+    </script>
     <script type="text/javascript">
         function previewImage() {
             const image = document.querySelector("#why_us_image");

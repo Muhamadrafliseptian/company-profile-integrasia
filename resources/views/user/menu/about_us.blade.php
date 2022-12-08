@@ -41,7 +41,7 @@ use Carbon\Carbon;
                                 use App\Models\Master\CountAbout;
                                 $data_about = CountAbout::get();
                             @endphp
-                            @foreach ($data_about as $data)
+                            @forelse ($data_about as $data)
                             <div class="col-md-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box">
                                     <i class="{{ $data->icon }}"></i>
@@ -51,7 +51,17 @@ use Carbon\Carbon;
                                     </p>
                                 </div>
                             </div>
-                             @endforeach
+                            @empty
+                        <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="alert alert-danger text-center">
+                                <i>
+                                    <b>
+                                        " Data Tidak Ada "
+                                    </b>
+                                </i>
+                            </div>
+                        </div>
+                             @endforelse
                         </div>
                     </div>
                 </div>
@@ -150,8 +160,17 @@ use Carbon\Carbon;
                                     class="bx bxs-show"></i></a>
                         </div>
                     </div>
-                @empty
-                @endforelse
+                    @empty
+                        <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="alert alert-danger text-center">
+                                <i>
+                                    <b>
+                                        " Data Tidak Ada "
+                                    </b>
+                                </i>
+                            </div>
+                        </div>
+                    @endforelse
             </div>
         </div>
     </section>
@@ -170,14 +189,16 @@ use Carbon\Carbon;
                         </a>
                     </div>
                 @empty
-                    <div class="col-md-12 d-flex align-items-center justify-content-center text-center text-center">
-                        <i>
-                            <b>
-                                " DATA SAAT INI BELUM TERSEDIA "
-                            </b>
-                        </i>
-                    </div>
-                @endforelse
+                        <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="alert alert-danger text-center">
+                                <i>
+                                    <b>
+                                        " Data Tidak Ada "
+                                    </b>
+                                </i>
+                            </div>
+                        </div>
+                    @endforelse
             </div>
         </div>
     </section>

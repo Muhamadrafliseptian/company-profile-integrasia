@@ -58,7 +58,7 @@
                                 <tr>
                                     <td class="text-center">{{ ++$no }}.</td>
                                     <td>{{ $data->why_us_name }}</td>
-                                    <td>{{ $data->why_us_deskripsi }}</td>
+                                    <td>{!! $data->why_us_deskripsi !!}</td>
                                     <td class="text-center">
                                         <a href="{{ url('/admin/pengaturan/why_us/' . encrypt($data->id) . '/edit') }}"
                                             class="btn btn-warning btn-sm btn-social">

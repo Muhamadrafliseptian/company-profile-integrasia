@@ -9,32 +9,21 @@
                 {{ $detail->why_us_name }}
             </h1>
             <h5 class="text-center text-light">
-                {{ $detail->why_us_deskripsi }}
+                {!! $detail->why_us_deskripsi !!}
             </h5>
         </div>
     </section>
-
-    <div class="container" data-aos="fade-up">
-        <section id="portfolio" class="portfolio">
-            <div class="container" data-aos="fade-up">
-                <div class="section-title">
-                    <h2>After Sales Services</h2>
-                    <h3> <span>We Delivered
-                            to You</span></h3>
-                </div>
-            </div>
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-6 ">
-                    <img class="img-fluid mb-4 mb-lg-0" style="border:0; width: 80%; height: 400px;"
-                        src="{{ url('/storage/' . $detail->why_us_image) }}" alt="">
-                </div>
-                <div class="col-lg-6">
-                    <p>
-                        {{ $detail->why_us_deskripsi }}
-                    </p>
-                </div>
-            </div>
+    <section>
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center">
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1">{{ $detail->why_us_name }}</h1>
+                <p class="lead">{!! $detail->why_us_deskripsi !!}</p>
+    </div>
+    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3" src="{{ url('/storage/' . $detail->why_us_image) }}" alt="" width="720">
+    </div>
+    </div>
     </div>
     </section>
-    @include('user.menu.benefit')
 @endsection
