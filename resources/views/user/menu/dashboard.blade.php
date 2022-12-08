@@ -173,38 +173,59 @@
 
             </div>
         </section>
-        <section id="team" class="team section">
+        <section id="recent-blog-posts" class="recent-blog-posts">
             <div class="container" data-aos="fade-up">
-
-                <div class="section-title">
-                    <h2>Blogs</h2>
-                    <h3><span>News Blogs</span></h3>
-                    <p>
-                        Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque
-                        vitae autem.
-                    </p>
+                <div class="section-title mt-4">
+                    <h2>Recent Blog Posts</h2>
+                    <h3><span>Lorem</span></h3>
+                        <p>
+                            In commodi voluptatem excepturi quaerat nihil error autem
+                            voluptate ut et officia consequuntu
+                        </p>
                 </div>
+        <div class="row gy-5">
+            @forelse ($data_blog as $data)
+            <div
+            class="col-xl-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            >
+        <div class="post-item position-relative h-100">
+            <div class="post-img position-relative overflow-hidden">
+                <img
+                    src="{{ url('/storage/' . $data->gambar) }}"
+                    class="img-fluid"
+                    alt=""
+                />
+                <span class="post-date">December 12</span>
+            </div>
 
-                <div class="row">
-                    @forelse ($data_blog as $data)
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <div class="member">
-                                <div class="member-img">
-                                    <img src="{{ url('/storage/' . $data->gambar) }}" class="img-fluid w-100"
-                                        style="height: 200px;">
-                                </div>
-                                <div class="member-info">
-                                    <h4>
-                                        {{ $data->title }}
-                                    </h4>
-                                    <a href="{{ url('/blog/berita/' . $data->slug) }}">
-                                        Selengkapnya
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    @empty
+                <div class="post-content d-flex flex-column">
+                  <h3 class="post-title">
+                    {{ $data->title }}
+                  </h3>
+
+                  <div class="meta d-flex align-items-center">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-person"></i>
+                      <span class="ps-2">{{ $data->getUser->nama }}</span>
+                    </div>
+                    <span class="px-3 text-black-50">/</span>
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-folder2"></i>
+                      <span class="ps-2">{{ $data->getKategori->nama_kategori }}</span>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <a href="{{ url('/blog/berita/' . $data->slug) }}" class="readmore stretched-link"
+                    ><span>Read More</span><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            @empty
                         <div class="col-md-12" data-aos="fade-up" data-aos-delay="100">
                             <div class="alert alert-danger text-center">
                                 <i>
@@ -215,10 +236,8 @@
                             </div>
                         </div>
                     @endforelse
-                    <a href="{{ url('/blog/berita') }}" class="text-center btn btn-sm btn-primary w-">
-                        Lihat Lebih Banyak
-                    </a>
-                </div>
-            </div>
-        </section>
+            <!-- End post item -->
+          </div>
+        </div>
+      </section>
     @endsection
