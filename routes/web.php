@@ -31,6 +31,7 @@ use App\Http\Controllers\Pengaturan\VisiMisiController;
 use App\Http\Controllers\Solusi\GaleriSolusiController;
 use App\Http\Controllers\Solusi\KategoriSolusiController;
 use App\Http\Controllers\Solusi\SolusiController;
+use App\Models\Master\StudyCase;
 use App\Models\Master\WhoUsAbout;
 
 /*
@@ -68,7 +69,7 @@ Route::get("/contact_us", [LandingPageController::class, "contact_us"]);
 Route::get("/why_us", [LandingPageController::class, "why_us"]);
 Route::get("/why_us/{slug}", [LandingPageController::class, "detail_why_us"]);
 Route::get("/study_case", [LandingPageController::class, "study_case"]);
-Route::get("/detail_studyCase", [LandingPageController::class, "detail_study_case"]);
+Route::get("/detail_studyCase/{slug}", [LandingPageController::class, "detail_study_case"]);
 Route::prefix("blog")->group(function () {
     Route::get("/event", [LandingPageBlogController::class, "event"]);
     Route::get("/berita", [LandingPageBlogController::class, "berita"]);
@@ -151,6 +152,8 @@ Route::prefix("admin")->group(function () {
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);
             Route::resource("milestone", MilestoneController::class);
 
+            Route::get("/study_case/edit", [StudyCase::class, "edit"]);
+            Route::put("/study_case/simpan", [StudyCaseController::class, "update"]);
             Route::resource("study_case", StudyCaseController::class);
         });
 

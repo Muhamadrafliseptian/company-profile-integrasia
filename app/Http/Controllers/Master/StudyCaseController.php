@@ -77,7 +77,7 @@ class StudyCaseController extends Controller
             $data = $request->gambarLama;
         }
 
-        StudyCase::create([
+        StudyCase::where("id", decrypt($id))->update([
             "id_partner" => $request->id_partner,
             "study_case_gambar" => $data,
             "study_case_judul" => $request->study_case_judul,
@@ -87,7 +87,8 @@ class StudyCaseController extends Controller
             "id_user" => Auth::user()->id
         ]);
 
-        return back()->with(['message' => '<script>swal("Berhasil", "Data Berhasil di Tambahkan", "success");</script>']);
+        return redirect()->intended("/admin/master/study_case")->with(["message" => '<script>swal("Berhasil", "Data Berhasil disimpan", "success");</script>']);
+
     }
 
     public function destroy(Request $request, $id)

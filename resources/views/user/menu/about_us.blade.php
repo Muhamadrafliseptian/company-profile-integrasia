@@ -83,16 +83,18 @@ use Carbon\Carbon;
                     benefits of integrated and enterprise solutions in a more affordable way.</p>
             </div>
             <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column align-items-lg-center">
+                @foreach ($data_eco_spirit as $data)
+                <div class="col-lg-6 order-2 mt-5 order-lg-1 d-flex flex-column align-items-lg-center">
                     <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bx bx-receipt"></i>
-                        <h4>IDM (Integrasia Data Model)</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                        <i class="{{ $data->eco_spirit_icon }}"></i>
+                        <h4>{{ $data->eco_spirit_judul }}</h4>
+                        <p>{!! $data->eco_spirit_deskripsi !!}</p>
                     </div>
                 </div>
-                <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
+                {{-- <div class="image col-lg-6 order-1 order-lg-2 " data-aos="zoom-in" data-aos-delay="100">
                     <img src="assets/img/eco.png" alt="" class="img-fluid">
-                </div>
+                </div> --}}
+                @endforeach
             </div>
         </div>
     </section>
@@ -134,12 +136,12 @@ use Carbon\Carbon;
                         <img src="{{ url('/storage/' . $item->milestone_gambar) }}" class="img-fluid"
                             style="height: 300px;">
                         <div class="portfolio-info">
-                            <h4>{{ $item->id }}</h4>
+                            <h4>{{ $item->milestone_judul }}</h4>
                             <p>
                                 {{ Carbon::createFromFormat('Y-m-d H:i:s', $item->created_at)->isoFormat('D MMMM Y') }}
                             </p>
                             <a href="{{ url('/storage/' . $item->milestone_gambar) }}" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox preview-link" title="{{ $item->id }}"><i
+                                class="portfolio-lightbox preview-link" title="{{ $item->milestone_judul }}"><i
                                     class="bx bxs-show"></i></a>
                         </div>
                     </div>

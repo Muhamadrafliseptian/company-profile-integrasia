@@ -6,9 +6,6 @@
             <h1 class="text-center text-light">
                 {{ $detail->solusi_nama }}
             </h1>
-            <h5 class="text-center text-light">
-                {{ $detail->solusi_deskripsi }}
-            </h5>
             <div class="text-center">
                 <a href="https://wa.me/628117502838?text=Hello%20I'm%20interested%20in%20OSLOG" class="btn btn-sm btn-success">Chat With Our Team</a>
             </div>
@@ -42,8 +39,8 @@
             <img src="{{ url('/storage/' . $detail->solusi_gambar) }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
                     </div>
             <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
+                <h1 class="display-5 fw-bold lh-1 mb-3">{{ $detail->solusi_nama }}</h1>
+                    <p class="lead">{{ $detail->solusi_deskripsi }}</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                     <a href="#descone" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
                 </div>

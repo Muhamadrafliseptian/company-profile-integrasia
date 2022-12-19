@@ -71,18 +71,14 @@
     </section>
     </div>
     <section id="featured-services" class="featured-services">
-        <div class="container" data-aos="fade-up">
+        <div class="container col-xxl-10 px-4 py-5" data-aos="fade-up">
             <div class="section-title mt-4">
                 <h2>Video</h2>
                 <h3><span>Integrasia Utama</span></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quam eligendi a facilis expedita molestias quia eum, repellat maxime, odit, itaque magnam unde. Quo doloribus cupiditate culpa sint repudiandae? Commodi.</p>
             </div>
             <div class="card" style="border: none;">
-                <video class="w-100 h-100" controls>
-                    <source src="{{ url('assets/video/test.mp4') }}" type="video/mp4">
-                    <source src="{{ url('assets/video/test.mp4') }}" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" height="500" class="" frameborder="0"></iframe>
             </div>
         </div>
         </div>
@@ -177,7 +173,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title mt-4">
                     <h2>Recent Blog Posts</h2>
-                    <h3><span>Lorem</span></h3>
+                    <h3><span>Check Our Latest Blog</span></h3>
                         <p>
                             In commodi voluptatem excepturi quaerat nihil error autem
                             voluptate ut et officia consequuntu

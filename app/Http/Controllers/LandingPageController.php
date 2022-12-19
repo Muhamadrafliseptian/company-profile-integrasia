@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pesan;
 use App\Models\Blog\Post;
-use App\Models\Home\Testimonial;
-use App\Models\Master\Milestone;
+use Illuminate\Http\Request;
+use App\Models\Solusi\Solusi;
 use App\Models\Master\Partner;
+use App\Models\Home\Testimonial;
+use App\Models\Master\EcoSpirit;
+use App\Models\Master\Milestone;
 use App\Models\Master\StudyCase;
+use App\Models\Pengaturan\WhyUs;
+use App\Models\ProfilPerusahaan;
 use App\Models\Pengaturan\Carousel;
 use App\Models\Pengaturan\VisiMisi;
-use App\Models\Pengaturan\WhyUs;
-use App\Models\Pesan;
-use App\Models\ProfilPerusahaan;
 use App\Models\Solusi\GaleriSolusi;
-use App\Models\Solusi\Solusi;
-use Illuminate\Http\Request;
 
 
 class LandingPageController extends Controller
@@ -36,7 +37,8 @@ class LandingPageController extends Controller
         $data = [
             "milestone" => Milestone::where("milestone_status", 1)->paginate(6),
             "profil_perusahaan" => ProfilPerusahaan::first(),
-            "visi_m isi" => VisiMisi::first(),
+            "visi_misi" => VisiMisi::first(),
+            "data_eco_spirit" => EcoSpirit::get(),
             "data_partnert" => Partner::orderBy("created_at", "DESC")->paginate(6)
         ];
 
@@ -76,14 +78,18 @@ class LandingPageController extends Controller
     {
         $data = [
             "data_study_case" => StudyCase::orderBy("created_at", "DESC")->paginate(6)
+
         ];
 
         return view("user.menu.study_case", $data);
     }
 
-    public function detail_study_case()
+    public function detail_study_case($slug)
     {
-        return view("user.menu.detail_studyCase");
+        $data = [
+            "detail" => StudyCase::where("study_case_slug", $slug)->first(),
+        ];
+        return view("user.menu.detail_studyCase", $data);
     }
 
     public function contact_us()

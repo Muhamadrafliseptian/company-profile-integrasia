@@ -182,93 +182,9 @@ h6 {
 #topbar .social-links a:hover {
     color: white;
 }
-
-/* #detailstudycase */
-
-#detail_StudyCase #detailStudyCase {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    padding: 140px 0 100px 0;
+#detailstudycase {
+    margin-top: 20px;
 }
-
-#detailStudyCase::before {
-    content: "";
-    position: absolute;
-    right: -100%;
-    top: 20%;
-    width: 250%;
-    height: 200%;
-    z-index: -1;
-    background-color: #ffffff;
-    transform: skewY(135deg);
-}
-
-#detailStudyCase h1 {
-    margin: 0 0 10px 0;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 56px;
-    color: #5777ba;
-    font-family: "Poppins", sans-serif;
-}
-
-#detailStudyCase h3 {
-    color: #575757;
-    margin-bottom: 50px;
-    font-size: 18px;
-}
-
-#detailStudyCase .download-btn {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
-    display: inline-block;
-    padding: 8px 24px 10px 46px;
-    border-radius: 3px;
-    transition: 0.5s;
-    color: #fff;
-    background: #47536e;
-    position: relative;
-}
-
-@media (max-width: 991px) {
-    #detailStudyCase {
-        text-align: center;
-    }
-
-    #detailStudyCase .detailStudyCase-img {
-        text-align: center;
-    }
-
-    #detailStudyCase .detailStudyCase-img img {
-        width: 60%;
-    }
-}
-
-@media (max-width: 768px) {
-    #detailStudyCase h1 {
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-    #detailStudyCase h2 {
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-
-    #detailStudyCase .detailStudyCase-img img {
-        width: 70%;
-    }
-}
-
-@media (max-width: 575px) {
-    #detailStudyCase .detailStudyCase-img img {
-        width: 80%;
-    }
-}
-
 .details .content + .content {
     margin-top: 100px;
 }

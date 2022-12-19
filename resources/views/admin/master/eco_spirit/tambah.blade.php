@@ -40,17 +40,17 @@
                     {{ csrf_field() }}
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="about_icon"> Icon </label>
+                            <label for="eco_spirit_judul"> Icon </label>
                             <input type="text" class="form-control" name="eco_spirit_icon" id="eco_spirit_icon"
                                 placeholder="Masukkan Nama" value="">
                         </div>
                         <div class="form-group">
-                            <label for="about_judul"> Judul </label>
+                            <label for="eco_spirit_judul"> Judul </label>
                             <input type="text" class="form-control" name="eco_spirit_judul" id="eco_spirit_judul"
                                 placeholder="Masukkan Nama" value="">
                         </div>
                         <div class="form-group">
-                            <label for="about_deskripsi"> Deskripsi </label>
+                            <label for="eco_spirit_deskripsi"> Deskripsi </label>
                             <input type="text" class="form-control" name="eco_spirit_deskripsi" id="eco_spirit_deskripsi"
                                 placeholder="Masukkan Nama" value="">
                         </div>
@@ -105,10 +105,48 @@
     <script src="{{ url('/template') }}/bower_components/ckeditor/ckeditor.js"></script>
     <script>
         $(function() {
-            CKEDITOR.replace('eco_spirit_deskripsi')
-            CKEDITOR.replace('judul')
+            CKEDITOR.replace('')
         })
     </script>
     <script src="{{ url('/template') }}/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="{{ url('/template') }}/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script>
+         ! function(a, i, r) {
+            var e = {};
+            e.UTIL = {
+                setupFormValidation: function() {
+                    a("#tambahEcoSpirit").validate({
+                        ignore: "",
+                        rules: {
+                            eco_spirit_icon: {
+                                required: !0
+                            },
+                            eco_spirit_judul: {
+                                required: !0
+                            },
+                            eco_spirit_deskripsi: {
+                                required: !0
+                            },
+                        },
+                        messages: {
+                            eco_spirit_icon: {
+                                required: "Kolom icon Harap di Isi!"
+                            },
+                            eco_spirit_judul: {
+                                required: "Kolom Judul Harap di IsI!"
+                            },
+                            eco_spirit_deskripsi: {
+                                required: "Kolom Deskripsi Harap di Isi!"
+                            },
+                        },
+                        submitHandler: function(a) {
+                            a.submit()
+                        }
+                    })
+                }
+            }, a(r).ready(function(a) {
+                e.UTIL.setupFormValidation()
+            })
+        }(jQuery, window, document);
+    </script>
 @endsection
