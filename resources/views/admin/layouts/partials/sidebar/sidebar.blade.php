@@ -30,7 +30,7 @@ use App\Models\Pengaturan\Menu;
     <li class="header">MENU</li>
     <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
         <a href="{{ url('/admin/dashboard') }}">
-            <i class="fa fa-files-o"></i>
+            <i class="fa fa-dashboard"></i>
             <span>Dashboard</span>
         </a>
     </li>
