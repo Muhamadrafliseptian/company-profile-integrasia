@@ -59,27 +59,27 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="lowongan_nama"> Nama Lowongan </label>
-                                    <input type="text" class="form-control" name="lowongan_nama" id="lowongan_nama" value="{{ old('lowongan_nama') }}">
-                                        placeholder="Masukkan Nama Lowongan">
+                                    <input type="text" class="form-control" placeholder="Masukkan Nama Lowongan" name="lowongan_nama" id="lowongan_nama" value="{{ old('lowongan_nama') }}">
+                                        >
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="lowongan_gaji"> Gaji Lowongan </label>
-                                    <input type="number" class="form-control" name="lowongan_gaji" id="lowongan_gaji" value="{{ old('lowongan_gaji') }}">
-                                        placeholder="Masukkan Nominal Gaji" min="1000">
+                                    <input type="number" class="form-control" placeholder="Masukkan Nominal Gaji" min="1000" name="lowongan_gaji" id="lowongan_gaji" value="{{ old('lowongan_gaji') }}">
+                                        >
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="lowongan_alamat"> Alamat Lowongan </label>
-                            <input type="text" class="form-control" name="lowongan_alamat" id="lowongan_alamat" value="{{ old('lowongan_alamat') }}">
-                                placeholder="Masukkan Alamat Lowongan">
+                            <input type="text" class="form-control" placeholder="Masukkan Alamat Lowongan" name="lowongan_alamat" id="lowongan_alamat" value="{{ old('lowongan_alamat') }}">
+                                >
                         </div>
                         <div class="form-group">
                             <label for="lowongan_deskripsi"> Deskripsi Pekerjaan </label>
-                            <textarea name="lowongan_deskripsi" class="form-control" id="lowongan_deskripsi" rows="5" value="{{ old('lowongan_deskripsi') }}">
-                                placeholder="Masukkan Deskripsi Lowongan"></textarea>
+                            <textarea name="lowongan_deskripsi" class="form-control" placeholder="Masukkan Deskripsi Lowongan" id="lowongan_deskripsi" rows="5" value="{{ old('lowongan_deskripsi') }}">
+                                ></textarea>
                         </div>
                     </div>
                     <div class="box-footer">
