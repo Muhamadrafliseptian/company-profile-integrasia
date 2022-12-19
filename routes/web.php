@@ -152,16 +152,17 @@ Route::prefix("admin")->group(function () {
             Route::put("/milestone/{id}/aktifkan", [MilestoneController::class, "aktifkan"]);
             Route::put("/milestone/{id}/non_aktifkan", [MilestoneController::class, "non_aktifkan"]);
             Route::resource("milestone", MilestoneController::class);
+        });
 
+        Route::prefix("study_case")->group(function () {
             Route::get("/study_case/edit", [StudyCase::class, "edit"]);
             Route::put("/study_case/simpan", [StudyCaseController::class, "update"]);
             Route::resource("study_case", StudyCaseController::class);
 
-            Route::resource("gallery_study_case", GalleryStudyCaseController::class);
-
-
+            Route::prefix("gallery_study")->group(function () {
+                Route::resource("/", GalleryStudyCaseController::class);
+            });
         });
-
 
         Route::get("/blog/{id}/komentar", [PostController::class, "lihat_komentar"]);
         Route::get("/blog/view_pesan", [PostController::class, "view_pesan"]);

@@ -36,7 +36,7 @@
                         <i class="fa fa-plus"></i> Tambah @yield('title')
                     </h3>
                 </div>
-                <form action="{{ url('/admin/master/study_case/gallery_study_case') }}" method="POST" id="galeriSolusi" enctype="multipart/form-data">
+                <form action="{{ url('/admin/study_case/gallery_study') }}" method="POST" id="galeriSolusi" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="box-body">
                         <div class="form-group">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pesan;
 use App\Models\Blog\Post;
+use App\Models\GalleryStudyCase;
 use Illuminate\Http\Request;
 use App\Models\Solusi\Solusi;
 use App\Models\Master\Partner;
@@ -71,6 +72,7 @@ class LandingPageController extends Controller
             "detail" => WhyUs::where("why_us_slug", $slug)->first()
         ];
 
+
         return view("user.menu.why_us.detail_why_us", $data);
     }
 
@@ -89,6 +91,9 @@ class LandingPageController extends Controller
         $data = [
             "detail" => StudyCase::where("study_case_slug", $slug)->first(),
         ];
+
+        $data["gallery_study_case"] = GalleryStudyCase::where("id_gallery_study_case", $data["detail"]->id)->get();
+
         return view("user.menu.detail_studyCase", $data);
     }
 
