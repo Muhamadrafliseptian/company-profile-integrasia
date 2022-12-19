@@ -16,11 +16,11 @@ class KategoriSolusiSeeder extends Seeder
     public function run()
     {
         KategoriSolusi::create([
-            "kategori_solusi" => "Forum"
+            "kategori_solusi" => "Developer Solution"
         ]);
 
         KategoriSolusi::create([
-            "kategori_solusi" => "Diskusi"
+            "kategori_solusi" => "Enterprise System"
         ]);
     }
 }

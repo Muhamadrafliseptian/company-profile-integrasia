@@ -16,26 +16,14 @@ class WhyUsSeeder extends Seeder
     public function run()
     {
         WhyUs::create([
-            "why_us_name" => "Forum Diskusi",
-            "why_us_slug" => "forum-diskusi",
+            "why_us_name" => "Fast",
+            "why_us_slug" => "fast",
             "why_us_deskripsi" => "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         ]);
 
         WhyUs::create([
-            "why_us_name" => "Forum Diskusi",
-            "why_us_slug" => "forum-diskusi",
-            "why_us_deskripsi" => "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
-        ]);
-
-        WhyUs::create([
-            "why_us_name" => "Forum Diskusi",
-            "why_us_slug" => "forum-diskusi",
-            "why_us_deskripsi" => "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
-        ]);
-
-        WhyUs::create([
-            "why_us_name" => "Forum Diskusi",
-            "why_us_slug" => "forum-diskusi",
+            "why_us_name" => "Move forward",
+            "why_us_slug" => "move-forward",
             "why_us_deskripsi" => "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
         ]);
     }

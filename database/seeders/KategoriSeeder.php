@@ -16,18 +16,18 @@ class KategoriSeeder extends Seeder
     public function run()
     {
         Kategori::create([
-            "nama_kategori" => "Makanan",
-            "slug" => "makanan"
+            "nama_kategori" => "Teknologi",
+            "slug" => "teknologi"
         ]);
 
         Kategori::create([
-            "nama_kategori" => "Diskusi Forum",
-            "slug" => "diskusi-forum"
+            "nama_kategori" => "Geofisial",
+            "slug" => "geofisial"
         ]);
 
         Kategori::create([
-            "nama_kategori" => "Majalah Koran",
-            "slug" => "majalah-koran"
+            "nama_kategori" => "Mapping",
+            "slug" => "mapping"
         ]);
     }
 }

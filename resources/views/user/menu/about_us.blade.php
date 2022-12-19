@@ -10,11 +10,11 @@ use Carbon\Carbon;
        <div class="container col-xxl-8 px-4 py-5">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="{{ url('assets/img/1.jpg') }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        <img src="{{ url('/storage/' . $profil_perusahaan->logo) }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Integrasia Utama</h1>
-        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint sunt numquam expedita at veniam maxime cupiditate ut nisi animi, nam inventore mollitia beatae omnis quo porro deleniti atque quaerat?</p>
+        <h1 class="display-5 fw-bold lh-1 mb-3">{{ $profil_perusahaan->nama_perusahaan }}</h1>
+        <p class="lead">{!! $profil_perusahaan->deskripsi !!}</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <a href="#counts" class="btn btn-primary btn-sm px-4 me-md-2">Get Started</a>
         </div>
@@ -34,7 +34,7 @@ use Carbon\Carbon;
                 <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start"
                     data-aos="fade-right" data-aos-delay="150">
                 </div>
-                <div class="col-xl-12 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
+                <div class="col-xl-12 d-flex align-items-stretch pt-xl-0" data-aos="fade-left" data-aos-delay="300">
                     <div class="content d-flex flex-column justify-content-center">
                         <div class="row">
                              @php
@@ -42,12 +42,10 @@ use Carbon\Carbon;
                                 $data_about = CountAbout::get();
                             @endphp
                             @forelse ($data_about as $data)
-                            <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="col-md-12">
                                 <div class="count-box">
-                                    <i class="{{ $data->icon }}"></i>
-                                    <span>{{ $data->judul }}</span>
                                     <p>
-                                       {{ $data->deskripsi }}
+                                       {!! $data->deskripsi !!}
                                     </p>
                                 </div>
                             </div>
@@ -77,7 +75,7 @@ use Carbon\Carbon;
     </section>
     <section id="features" class="features counts">
         <div class="container" data-aos="fade-up">
-            <div class="section-title mt-0">
+            <div class="section-title mt-4">
                 <h2>One Spirit Eco System</h2>
                 <h3><span>Spirit System</span></h3>
                 <p>Integrationa Utama calls it the Integration Data Model (IDM). IDM is part of a platform that integrates
@@ -89,21 +87,6 @@ use Carbon\Carbon;
                     <div class="icon-box mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
                         <i class="bx bx-receipt"></i>
                         <h4>IDM (Integrasia Data Model)</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                    </div>
-                    <div class="icon-box mt-2" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bx bx-cube-alt"></i>
-                        <h4>Geospatial (One Spirit Map)</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                    </div>
-                    <div class="icon-box mt-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bx-images"></i>
-                        <h4>Tracking</h4>
-                        <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-                    </div>
-                    <div class="icon-box mt-2" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bx bx-images"></i>
-                        <h4>IOT Platform</h4>
                         <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
                     </div>
                 </div>

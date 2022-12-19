@@ -29,7 +29,7 @@
 @section('content')
 
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="box box-primary">
                 <div class="box-header">
                     <h3 class="box-title">
@@ -105,7 +105,7 @@
     <script src="{{ url('/template') }}/bower_components/ckeditor/ckeditor.js"></script>
     <script>
         $(function() {
-            CKEDITOR.replace('deskripsi')
+            CKEDITOR.replace('eco_spirit_deskripsi')
             CKEDITOR.replace('judul')
         })
     </script>

@@ -1305,39 +1305,6 @@ section {
     text-decoration: none;
 }
 
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-.skills .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
-}
-.skills .progress .skill {
-    padding: 0;
-    margin: 0 0 6px 0;
-    text-transform: uppercase;
-    display: block;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: #222222;
-}
-.skills .progress .skill .val {
-    float: right;
-    font-style: normal;
-}
-.skills .progress-bar-wrap {
-    background: #e2eefd;
-    height: 10px;
-}
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: #0071bb;
-}
-
 .counts {
     padding-top: 0;
 }
@@ -1357,31 +1324,11 @@ section {
 }
 
 .counts .content .count-box {
-    padding: 20px 0;
+    padding: 5px 0;
     width: 100%;
 }
 
-.counts .content .count-box i {
-    display: block;
-    font-size: 36px;
-    color: #3498db;
-    float: left;
-    line-height: 0;
-}
-
-.counts .content .count-box span {
-    font-size: 36px;
-    line-height: 30px;
-    display: block;
-    font-weight: 700;
-    color: #222222;
-    margin-left: 50px;
-}
-
 .counts .content .count-box p {
-    padding: 15px 0 0 0;
-    margin: 0 0 0 50px;
-    font-family: "Raleway", sans-serif;
     font-size: 14px;
     color: #484848;
 }
@@ -1495,49 +1442,6 @@ section {
         min-height: 200px;
     }
 }
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-/* .counts {
-    padding: 70px 0 60px;
-}
-.counts .count-box {
-    padding: 30px 30px 25px 30px;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    background: #f1f6fe;
-}
-.counts .count-box i {
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px;
-    background: #0071bb;
-    color: #fff;
-    width: 56px;
-    height: 56px;
-    line-height: 0;
-    border-radius: 50px;
-    border: 5px solid #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-.counts .count-box span {
-    font-size: 36px;
-    display: block;
-    font-weight: 600;
-    color: #062b5b;
-}
-.counts .count-box p {
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-} */
 
 /*--------------------------------------------------------------
 # Clients
