@@ -10,7 +10,7 @@ $data_profil = ProfilPerusahaan::first();
         <h1 class="logo mt-4 mb-4 img-fluid">
             <a href="{{ url('/') }}">
                 @if (empty($data_profil->logo))
-                    <img src="{{ asset('assets/img/new-logo.png') }}" height="150%" width="140%" alt="">
+                    <img src="{{ asset('assets/img/new-logo.png') }}" height="130%" width="250%" alt="">
                 @else
                     <img src="{{ url('/storage/' . $data_profil->logo) }}" height="150%" width="140%" alt="">
                 @endif

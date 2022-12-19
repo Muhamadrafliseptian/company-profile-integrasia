@@ -1,38 +1,39 @@
 <?php
 
-use App\Http\Controllers\Akun\MenuRoleController;
-use App\Http\Controllers\Akun\ProfilSayaController;
-use App\Http\Controllers\Akun\RoleController;
-use App\Http\Controllers\Akun\UsersController;
-use App\Http\Controllers\AppController;
-use App\Http\Controllers\Autentikasi\LoginController;
-use App\Http\Controllers\Blog\KategoriController;
-use App\Http\Controllers\Blog\PostController;
-use App\Http\Controllers\Blog\TagController;
+use App\Models\Master\StudyCase;
+use App\Models\Master\WhoUsAbout;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Home\TestimonialController;
-use App\Http\Controllers\InformasiLoginController;
-use App\Http\Controllers\LandingPageBlogController;
+use App\Http\Controllers\AppController;
+use App\Http\Controllers\ParnertController;
+use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\Blog\TagController;
+use App\Http\Controllers\Akun\RoleController;
+use App\Http\Controllers\Blog\PostController;
+use App\Http\Controllers\Akun\UsersController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\Akun\MenuRoleController;
+use App\Http\Controllers\Blog\KategoriController;
 use App\Http\Controllers\LowonganKerjaController;
-use App\Http\Controllers\Master\CountAboutController;
+use App\Http\Controllers\Solusi\SolusiController;
+use App\Http\Controllers\InformasiLoginController;
+use App\Http\Controllers\Akun\ProfilSayaController;
+use App\Http\Controllers\LandingPageBlogController;
+use App\Http\Controllers\Pengaturan\MenuController;
+use App\Http\Controllers\Home\TestimonialController;
 use App\Http\Controllers\Master\EcoSpiritController;
 use App\Http\Controllers\Master\MilestoneController;
 use App\Http\Controllers\Master\StudyCaseController;
+use App\Http\Controllers\Pengaturan\WhyUsController;
+use App\Http\Controllers\Autentikasi\LoginController;
+use App\Http\Controllers\Master\CountAboutController;
 use App\Http\Controllers\Master\WhoUsAboutController;
-use App\Http\Controllers\ParnertController;
-use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\Pengaturan\BenefitController;
 use App\Http\Controllers\Pengaturan\CarouselController;
-use App\Http\Controllers\Pengaturan\MenuController;
-use App\Http\Controllers\Pengaturan\ProfilPerusahaanController;
-use App\Http\Controllers\Pengaturan\WhyUsController;
 use App\Http\Controllers\Pengaturan\VisiMisiController;
 use App\Http\Controllers\Solusi\GaleriSolusiController;
 use App\Http\Controllers\Solusi\KategoriSolusiController;
-use App\Http\Controllers\Solusi\SolusiController;
-use App\Models\Master\StudyCase;
-use App\Models\Master\WhoUsAbout;
+use App\Http\Controllers\Master\GalleryStudyCaseController;
+use App\Http\Controllers\Pengaturan\ProfilPerusahaanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -155,6 +156,10 @@ Route::prefix("admin")->group(function () {
             Route::get("/study_case/edit", [StudyCase::class, "edit"]);
             Route::put("/study_case/simpan", [StudyCaseController::class, "update"]);
             Route::resource("study_case", StudyCaseController::class);
+
+            Route::resource("gallery_study_case", GalleryStudyCaseController::class);
+
+
         });
 
 

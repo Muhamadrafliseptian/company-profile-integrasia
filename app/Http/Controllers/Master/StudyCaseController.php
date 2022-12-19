@@ -52,7 +52,7 @@ class StudyCaseController extends Controller
                 "id_user" => Auth::user()->id
             ]);
 
-            return redirect("/admin/master/study_case")->with(['message' => '<script>swal("Berhasil", "Data Berhasil di Tambahkan", "success");</script>']);
+            return redirect("admin/master/study_case")->with(['message' => '<script>swal("Berhasil", "Data Berhasil di Tambahkan", "success");</script>']);
         }
     }
 
